@@ -24,6 +24,7 @@ export interface GenericConfig<
     filters: MenuFilters<TValue> | MenuFilters<TValue>[];
     state?: TState;
     debug?: boolean;
+    initiallyReplaceable?: boolean;
     replaceable?: boolean;
     type?: unknown;
     formatting?: MenuFormatting;

@@ -157,7 +157,9 @@ export abstract class GenericMenu<
                     await sendMessage();
                 });
         } else {
-            ctx.deleteMessage(this.messageId).catch(() => {});
+            if (this.genericConfig.initiallyReplaceable) {
+                ctx.deleteMessage(this.messageId).catch(() => {});
+            }
             await sendMessage();
         }
 
